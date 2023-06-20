@@ -74,21 +74,18 @@ public class OrdersQtyAdaptor extends RecyclerView.Adapter<OrdersQtyAdaptor.View
             // Override the onClickListener for the positive button
             dialog.setOnShowListener(dialogInterface -> {
                 Button submitButton = dialog.getButton(AlertDialog.BUTTON_POSITIVE);
-                submitButton.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View view) {
-                        // Perform your condition check here
-                        String text = input.getText().toString();
-                        if (!text.isEmpty()) {
-                            // Condition is met, do something
-                            // ...
+                submitButton.setOnClickListener(view -> {
+                    // Perform your condition check here
+                    String text = input.getText().toString();
+                    if (!text.isEmpty()) {
+                        // Condition is met, do something
+                        // ...
 
-                            // Dismiss the dialog if needed
-                            dialog.dismiss();
-                        } else {
-                            // Condition is not met, show an error or take appropriate action
-                            input.setError("Please enter text");
-                        }
+                        // Dismiss the dialog if needed
+                        dialog.dismiss();
+                    } else {
+                          // Condition is not met, show an error or take appropriate action
+                        input.setError("Please enter text");
                     }
                 });
             });

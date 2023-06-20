@@ -68,7 +68,7 @@ public class OrderQtyActivity extends AppCompatActivity implements OrdersQty.OnP
                             super.onDismissClicked(dialog);
                         }
                     });
-        } );
+        });
     }
 
 }
